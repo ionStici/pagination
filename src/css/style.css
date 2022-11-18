@@ -23,6 +23,23 @@ body {
   color: #333;
 }
 
+.no-sel {
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Likely future */
+}
+
+@media (max-width: 28em) {
+  html {
+    font-size: 8px;
+  }
+}
+@media (max-width: 22em) {
+  html {
+    font-size: 7px;
+  }
+}
 body {
   background-color: rgba(0, 0, 0, 0.02);
 }
@@ -42,6 +59,7 @@ body {
 }
 .pag__box {
   display: flex;
+  justify-content: center;
 }
 .pag__btn:not(:last-child) {
   margin-right: 1rem;
@@ -112,25 +130,67 @@ body {
   justify-content: center;
   width: 3.5rem;
 }
+.pag__panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pag__panel__label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+.pag__panel__input {
+  width: 2.5rem;
+  padding: 0.1rem 0.2rem;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #555;
+  border: 0.2rem solid rgba(255, 135, 135, 0.7);
+  border-radius: 0.4rem;
+  margin: 0 0.3rem;
+  transition: border 0.1s, box-shadow 0.1s;
+}
+.pag__panel__input:focus {
+  outline: none;
+  border: 0.2rem solid #ff8787;
+}
+.pag__panel__btn {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #333;
+  border: 0.1rem solid rgba(255, 135, 135, 0.7);
+  border-radius: 0.4rem;
+  padding: 0.2rem 0.8rem;
+  background-color: #fff5f5;
+  transition: border 0.1s, transform 0.1s, box-shadow 0.1s;
+  cursor: pointer;
+}
+.pag__panel__btn:hover, .pag__panel__btn:focus {
+  outline: none;
+  border: 0.1rem solid rgba(255, 135, 135, 0.9);
+}
+.pag__panel__btn:active {
+  transform: scale(0.9);
+}
+.pag__line {
+  display: block;
+  margin: 1.5rem auto;
+  height: 0.1rem;
+  background-color: #ddd;
+  border-radius: 50%;
+}
 
 @media (max-width: 50em) {
   .pag-wrapper {
     max-width: 100%;
     border-radius: 0;
   }
-}
-@media (max-width: 28em) {
-  html {
-    font-size: 8px;
-  }
-}
-@media (max-width: 22em) {
-  html {
-    font-size: 7px;
-  }
-}
-.main {
-  margin-top: 20rem;
 }
 
 /*# sourceMappingURL=style.css.map */

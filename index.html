@@ -14,20 +14,20 @@
 
 
         <div class="pag-wrapper">
-            <div class="pag">
 
+            <div class="pag">
                 <div class="pag__box">
-                    <!-- <button class="pag__btn pag__btn--prev" disabled> -->
-                    <button class="pag__btn pag__btn--prev">
+                    <button class="pag__btn pag__btn--prev" disabled>
+                    <!-- <button class="pag__btn pag__btn--prev"> -->
                         <svg class="pag__btn__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/></svg>
                         <span class="pag__btn__text">Prev</span>
                     </button>
 
+                    <button class="pag__btn pag__btn__num pag__btn--active">1</button>
+                    <button class="pag__btn pag__btn__num">2</button>
                     <button class="pag__btn pag__btn__num">3</button>
                     <button class="pag__btn pag__btn__num">4</button>
-                    <button class="pag__btn pag__btn__num pag__btn--active">5</button>
-                    <button class="pag__btn pag__btn__num">6</button>
-                    <button class="pag__btn pag__btn__num">7</button>
+                    <button class="pag__btn pag__btn__num">5</button>
 
 
                     <button class="pag__btn pag__btn--next">
@@ -36,7 +36,18 @@
                     </button>
                 </div>
 
+                <div class="pag__line"></div>
+
+                <div class="pag__panel">
+                    <label class="pag__panel__label">
+                        <span class="pag__panel__text-1">Page</span>
+                        <input value="1" class="pag__panel__input" type="text">
+                        <span class="pag__panel__text-2">of 7</span>
+                    </label>
+                    <button class="pag__panel__btn">Show</button>
+                </div>
             </div>
+
         </div>
 
 
