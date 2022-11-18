@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1;
+  color: #333;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.pag-wrapper {
+  max-width: 75rem;
+  margin: 5rem auto;
+  padding: 2rem 0;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+  background-color: #fff;
+}
+
+.pag {
+  max-width: fit-content;
+  margin: 0 auto;
+}
+.pag__box {
+  display: flex;
+}
+.pag__btn:not(:last-child) {
+  margin-right: 1rem;
+}
+.pag__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: #555;
+  width: fit-content;
+  height: 3.5rem;
+  border: 0.2rem solid #ddd;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1) inset;
+  cursor: pointer;
+  transition: border 0.1s, transform 0.1s, box-shadow 0.1s;
+}
+.pag__btn__icon {
+  width: 2rem;
+  height: 2rem;
+}
+.pag__btn--prev {
+  padding-left: 0.5rem;
+}
+.pag__btn--next {
+  padding-right: 0.5rem;
+}
+.pag__btn--active {
+  background-color: #ff6b6b;
+  box-shadow: none;
+  border: 2px solid transparent;
+  color: #fff;
+}
+.pag__btn:hover, .pag__btn:focus {
+  outline: none;
+  box-shadow: none;
+  border: 0.2rem solid #bbb;
+  color: #111;
+}
+.pag__btn:active {
+  transform: scale(0.9);
+}
+.pag__btn--active:hover, .pag__btn--active:focus {
+  border: 0.2rem solid transparent;
+  color: #fff;
+}
+.pag__btn:disabled {
+  cursor: not-allowed;
+  color: #ccc;
+  border: 0.2rem solid #eee;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) inset;
+}
+.pag__btn:disabled:hover {
+  border: 0.2rem solid #eee;
+}
+.pag__btn:disabled:active {
+  transform: scale(1);
+}
+.pag__btn__num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+}
+
+@media (max-width: 50em) {
+  .pag-wrapper {
+    max-width: 100%;
+    border-radius: 0;
+  }
+}
+@media (max-width: 28em) {
+  html {
+    font-size: 8px;
+  }
+}
+@media (max-width: 22em) {
+  html {
+    font-size: 7px;
+  }
+}
+.main {
+  margin-top: 20rem;
+}
+
+/*# sourceMappingURL=style.css.map */

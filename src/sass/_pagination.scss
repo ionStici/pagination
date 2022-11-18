@@ -1,0 +1,131 @@
+//
+
+body {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.pag-wrapper {
+    max-width: 75rem;
+    margin: 5rem auto;
+    padding: 2rem 0;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
+    border-radius: 1rem;
+    background-color: #fff;
+}
+
+//
+
+.pag {
+    max-width: fit-content;
+    margin: 0 auto;
+
+    &__box {
+        display: flex;
+    }
+
+    &__btn:not(:last-child) {
+        margin-right: 1rem;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+
+        font-family: "Rubik", sans-serif;
+        font-size: 1.7rem;
+        font-weight: 400;
+        color: #555;
+
+        width: fit-content;
+        height: 3.5rem;
+        border: 0.2rem solid #ddd;
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        background-color: #fff;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.1) inset;
+
+        cursor: pointer;
+        transition: border 0.1s, transform 0.1s, box-shadow 0.1s;
+
+        &__icon {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        &--prev {
+            padding-left: 0.5rem;
+        }
+
+        &--next {
+            padding-right: 0.5rem;
+        }
+
+        &--active {
+            background-color: #ff6b6b;
+            box-shadow: none;
+            border: 2px solid transparent;
+            color: #fff;
+        }
+
+        &:hover,
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            border: 0.2rem solid #bbb;
+            color: #111;
+        }
+
+        &:active {
+            transform: scale(0.9);
+        }
+
+        &--active:hover,
+        &--active:focus {
+            border: 0.2rem solid transparent;
+            color: #fff;
+        }
+
+        &:disabled {
+            cursor: not-allowed;
+            color: #ccc;
+            border: 0.2rem solid #eee;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) inset;
+        }
+
+        &:disabled:hover {
+            border: 0.2rem solid #eee;
+        }
+
+        &:disabled:active {
+            transform: scale(1);
+        }
+
+        &__num {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3.5rem;
+        }
+    }
+}
+
+@media (max-width: 50em) {
+    .pag-wrapper {
+        max-width: 100%;
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 28em) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 22em) {
+    html {
+        font-size: 7px;
+    }
+}
