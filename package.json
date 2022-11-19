@@ -1,11 +1,18 @@
 {
-  "scripts": {
-    "live": "live-server",
-    "sass": "sass src/sass/main.scss src/css/style.css -w",
-    "start": "npm-run-all --parallel live sass"
-  },
-  "devDependencies": {
-    "npm-run-all": "^4.1.5",
-    "sass": "^1.56.1"
-  }
+    "scripts": {
+        "live": "live-server",
+        "sass": "sass src/sass/main.scss src/css/style.css -w",
+        "start": "npm-run-all --parallel live sass",
+
+        "compile:sass": "sass src/sass/main.scss src/css/style.css",
+        "prefixes": "postcss --use autoprefixer -b 'last 10 versions' src/css/style.css -o src/css/style.css",
+        "add:prefixes": "npm-run-all compile:sass prefixes"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.13",
+        "npm-run-all": "^4.1.5",
+        "postcss": "^8.4.19",
+        "postcss-cli": "^10.0.0",
+        "sass": "^1.56.1"
+    }
 }
