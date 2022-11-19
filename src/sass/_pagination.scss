@@ -181,9 +181,10 @@
     }
 }
 
-@media (max-width: 50em) {
+@media only screen and (max-width: 50em) {
     .pag-wrapper {
         max-width: 100%;
         border-radius: 0;
+        margin-top: 7.5rem;
     }
 }

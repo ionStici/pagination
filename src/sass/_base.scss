@@ -35,13 +35,19 @@ body {
     user-select: none; /* Likely future */
 }
 
-@media (max-width: 28em) {
+@media only screen and (max-width: 40em) {
+    html {
+        font-size: 9.5px;
+    }
+}
+
+@media only screen and (max-width: 28em) {
     html {
         font-size: 8px;
     }
 }
 
-@media (max-width: 22em) {
+@media only screen and (max-width: 22em) {
     html {
         font-size: 7px;
     }
