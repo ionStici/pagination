@@ -5,6 +5,15 @@ class PaginationView {
     addHandlerClick(handler) {
         this.#parentElement.addEventListener("click", function (e) {
             const btn = e.target.closest(".pag__btn");
+            const btnPanel = e.target.closest(".pag__panel__btn");
+
+            if (!btn && btnPanel) {
+                const pagePanel =
+                    +document.querySelector(".pag__panel__input").value;
+
+                handler(pagePanel);
+                return;
+            }
 
             if (!btn) return;
             if (btn.disabled) return;
