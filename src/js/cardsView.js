@@ -8,11 +8,6 @@ class CardsView {
 
     render(data) {
         this.#data = data;
-
-        this.#parentElement.style.opacity = "0";
-        // prettier-ignore
-        setTimeout(() => {this.#parentElement.style.opacity = "1";}, 200);
-
         const markup = this.#generateMarkup();
         this.#clear();
         this.#parentElement.insertAdjacentHTML("afterbegin", markup);
@@ -22,7 +17,7 @@ class CardsView {
         return this.#data.map((url, i) => {
             return `
                 <div class="card-wrapper">
-                <div class="card__num">01</div>
+                <div class="card__num">${String(i + 1).padStart(2, "0")}</div>
                 <div class="card">
                     <div class="card__img" style="background-image: url(${url});"></div>
                     <div class="card__text">
