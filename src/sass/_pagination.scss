@@ -1,12 +1,8 @@
-body {
-    background-color: rgba(0, 0, 0, 0.02);
-}
-
 .pag-wrapper {
     max-width: 75rem;
-    margin: 5rem auto;
+    margin: 5rem auto 10rem auto;
     padding: 2rem 0;
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
     border-radius: 1rem;
     background-color: #fff;
 }
@@ -87,7 +83,7 @@ body {
         }
 
         &:disabled {
-            cursor: not-allowed;
+            cursor: default;
             color: #ccc;
             border: 0.2rem solid #eee;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) inset;
@@ -113,7 +109,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        // margin-top: 2rem;
+        position: relative;
 
         &__label {
             display: flex;
@@ -155,7 +151,7 @@ body {
             border-radius: 0.4rem;
             padding: 0.2rem 0.8rem;
             background-color: #fff5f5;
-            // background-color: #fff;
+            background-color: #fff;
 
             transition: border 0.1s, transform 0.1s, box-shadow 0.1s;
             cursor: pointer;
@@ -169,6 +165,10 @@ body {
             &:active {
                 transform: scale(0.9);
             }
+        }
+
+        &__message {
+            display: none;
         }
     }
 
