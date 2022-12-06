@@ -21,7 +21,7 @@ class CardsView {
                 <div class="card">
                     <div class="card__img" style="background-image: url(${url});"></div>
                     <div class="card__text">
-                        <p class="card__title">Welcome / Hello World</p>
+                        <p class="card__title">Welcome</p>
                         <p class="card__p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur. </p>
                     </div>
                 </div>

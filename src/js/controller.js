@@ -14,4 +14,5 @@ const init = function () {
     controlPagination(1);
     paginationView.addHandlerClick(controlPagination);
 };
+
 init();
